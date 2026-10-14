@@ -1,16 +1,175 @@
-import { Link } from 'react-router-dom'
-import { services } from '../data/services.js'
-import useReveal from '../hooks/useReveal.js'
-import CTA from '../components/CTA.jsx'
-import ServiceGrid from '../components/ServiceGrid.jsx'
-import heroImage from '../images/hero.png'
-import deservesImage from '../images/deservers.png'
-import paintImage from '../images/car-paint.png'
-import balanceImage from '../images/wheel-balance.png'
-import mechanicalImage from '../images/car-lift.png'
+import { Link } from "react-router-dom";
+import { services } from "../data/services.js";
+import useReveal from "../hooks/useReveal.js";
+import CTA from "../components/CTA.jsx";
+import ServiceGrid from "../components/ServiceGrid.jsx";
+import heroImage from "../images/hero.png";
+import deservesImage from "../images/deservers.png";
+import paintImage from "../images/car-paint.png";
+import balanceImage from "../images/wheel-balance.png";
+import mechanicalImage from "../images/car-lift.png";
 
-function Hero() { return <><section className="hero hero-studio" id="top"><img className="hero-studio-image" src={heroImage} alt="SK Wheels workshop at sunset" /><div className="hero-studio-grid" /><div className="hero-copy studio-copy"><p className="eyebrow delay-1">SK WHEELS // MULTIBRAND WORKSHOP</p><h1><span className="word delay-1">DRIVE</span><span className="word accent delay-2">CONFIDENT.</span></h1><p className="hero-text delay-3">Precision care for every kilometre. Expert repair, detailing and diagnostics under one roof.</p><div className="hero-actions delay-4"><Link className="button" to="/contact">Book a service <i>-&gt;</i></Link><a className="text-link" href="#services">Explore services</a></div></div><div className="hero-index" aria-hidden="true">SK</div><div className="hero-service-tag delay-4"><span>01</span><b>COMPLETE<br />CAR CARE</b></div><a className="hero-scroll" href="#services">SCROLL TO EXPLORE <span>↓</span></a></section><div className="logo-strip"><div className="marquee"><span>PRECISION SERVICE</span><b>*</b><span>QUALITY PARTS</span><b>*</b><span>DRIVE WITH CONFIDENCE</span><b>*</b><span>PRECISION SERVICE</span></div></div></> }
-function Stats() { return <section className="stats"><div className="stats-image"><img src={deservesImage} alt="SK Wheels workshop team at work" /></div><div className="stats-copy reveal"><p className="eyebrow">// THE SK WHEELS DIFFERENCE</p><h2>YOUR CAR<br /><em>DESERVES MORE.</em></h2><p>We pair modern diagnostics with honest workmanship. No shortcuts, no surprises - only the care your car needs to perform at its best.</p><div className="numbers"><div><strong>1<span>+</span></strong><small>Year of experience</small></div><div><strong>100<span>+</span></strong><small>Cars cared for</small></div><div><strong>4.9<span>*</span></strong><small>Customer rating</small></div></div><Link className="button dark" to="/about">Our story</Link></div></section> }
-function Gallery() { const items = [[paintImage, 'Car painting work at SK Wheels', 'Detailing and paint', ''], [balanceImage, 'Wheel balancing service', 'Wheels that perform', 'tall'], [mechanicalImage, 'Mechanical work at SK Wheels', 'Mechanical care', '']]; return <section className="gallery section"><div className="section-head reveal"><div><p className="eyebrow">// WORK WE'RE PROUD OF</p><h2>MADE TO<br /><em>TURN HEADS.</em></h2></div><Link className="text-link" to="/contact">Start your project</Link></div><div className="gallery-grid">{items.map(([src, alt, label, type]) => <figure className={`${type} reveal`} key={label}><img src={src} alt={alt} /><figcaption>{label}</figcaption></figure>)}</div></section> }
+function Hero() {
+  return (
+    <>
+      <section className="hero hero-studio" id="top">
+        <img
+          className="hero-studio-image"
+          src={heroImage}
+          alt="SK Wheels workshop at sunset"
+        />
+        <div className="hero-studio-grid" />
+        <div className="hero-copy studio-copy">
+          <p className="eyebrow delay-1">SK WHEELS // MULTIBRAND WORKSHOP</p>
+          <h1>
+            <span className="word delay-1">DRIVE</span>
+            <span className="word accent delay-2">CONFIDENT.</span>
+          </h1>
+          <p className="hero-text delay-3">
+            Precision care for every kilometre. Expert repair, detailing and
+            diagnostics under one roof.
+          </p>
+          <div className="hero-actions delay-4">
+            <Link className="button" to="/contact">
+              Book a service <i>-&gt;</i>
+            </Link>
+            <a className="text-link" href="#services">
+              Explore services
+            </a>
+          </div>
+        </div>
+        <div className="hero-index" aria-hidden="true">
+          SK
+        </div>
+        <div className="hero-service-tag delay-4">
+          <span>01</span>
+          <b>
+            COMPLETE
+            <br />
+            CAR CARE
+          </b>
+        </div>
+        <a className="hero-scroll" href="#services">
+          SCROLL TO EXPLORE <span>↓</span>
+        </a>
+      </section>
+      <div className="logo-strip">
+        <div className="marquee">
+          <span>PRECISION SERVICE</span>
+          <b>*</b>
+          <span>QUALITY PARTS</span>
+          <b>*</b>
+          <span>DRIVE WITH CONFIDENCE</span>
+          <b>*</b>
+          <span>PRECISION SERVICE</span>
+        </div>
+      </div>
+    </>
+  );
+}
+function Stats() {
+  return (
+    <section className="stats">
+      <div className="stats-image">
+        <img src={deservesImage} alt="SK Wheels workshop team at work" />
+      </div>
+      <div className="stats-copy reveal">
+        <p className="eyebrow">// THE SK WHEELS DIFFERENCE</p>
+        <h2>
+          YOUR CAR
+          <br />
+          <em>DESERVES MORE.</em>
+        </h2>
+        <p>
+          We pair modern diagnostics with honest workmanship. No shortcuts, no
+          surprises - only the care your car needs to perform at its best.
+        </p>
+        <div className="numbers">
+          <div>
+            <strong>
+              1<span>+</span>
+            </strong>
+            <small>Year of experience</small>
+          </div>
+          <div>
+            <strong>
+              100<span>+</span>
+            </strong>
+            <small>Cars cared for</small>
+          </div>
+          <div>
+            <strong>
+              4.9<span>*</span>
+            </strong>
+            <small>Customer rating</small>
+          </div>
+        </div>
+        <Link className="button dark" to="/about">
+          Our story
+        </Link>
+      </div>
+    </section>
+  );
+}
+function Gallery() {
+  const items = [
+    [paintImage, "Car painting work at SK Wheels", "Detailing and paint", ""],
+    [balanceImage, "Wheel balancing service", "Wheels that perform", "tall"],
+    [mechanicalImage, "Mechanical work at SK Wheels", "Mechanical care", ""],
+  ];
+  return (
+    <section className="gallery section">
+      <div className="section-head reveal">
+        <div>
+          <p className="eyebrow">// WORK WE'RE PROUD OF</p>
+          <h2>
+            MADE TO
+            <br />
+            <em>TURN HEADS.</em>
+          </h2>
+        </div>
+        <Link className="text-link" to="/contact">
+          Start your project
+        </Link>
+      </div>
+      <div className="gallery-grid">
+        {items.map(([src, alt, label, type]) => (
+          <figure className={`${type} reveal`} key={label}>
+            <img src={src} alt={alt} />
+            <figcaption>{label}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+}
 
-export default function Home() { useReveal(); return <><Hero /><section id="services" className="section services-preview"><div className="section-head reveal"><div><p className="eyebrow">// WHAT WE DO</p><h2>EVERY DETAIL.<br /><em>DONE RIGHT.</em></h2></div><Link to="/services" className="round-link">VIEW ALL<br />SERVICES</Link></div><ServiceGrid items={services.slice(0, 6)} preview /></section><Stats /><Gallery /><CTA /></> }
+export default function Home() {
+  useReveal();
+  return (
+    <>
+      <Hero />
+      <section id="services" className="section services-preview">
+        <div className="section-head reveal">
+          <div>
+            <p className="eyebrow">// WHAT WE DO</p>
+            <h2>
+              EVERY DETAIL.
+              <br />
+              <em>DONE RIGHT.</em>
+            </h2>
+          </div>
+          <Link to="/services" className="round-link">
+            VIEW ALL
+            <br />
+            SERVICES
+          </Link>
+        </div>
+        <ServiceGrid items={services.slice(0, 6)} preview />
+      </section>
+      <Stats />
+      <Gallery />
+      <CTA />
+    </>
+  );
+}
