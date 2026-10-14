@@ -16,11 +16,15 @@ export default function Header() {
       <button
         className="menu"
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-controls="site-navigation"
         aria-label="Toggle navigation"
       >
-        {open ? "x" : "menu"}
+        <span />
+        <span />
+        <span />
       </button>
-      <nav className={open ? "open" : ""}>
+      <nav id="site-navigation" className={open ? "open" : ""}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/services">Services</NavLink>
         <NavLink to="/about">About us</NavLink>
