@@ -2,7 +2,7 @@ import { useState } from "react";
 import useReveal from "../hooks/useReveal.js";
 import { services } from "../data/services.js";
 
-const whatsappNumber = "9487875521";
+const whatsappNumber = "9503248068";
 
 function ContactIcon({ type }) {
   const paths = {
@@ -49,16 +49,26 @@ function ContactIcon({ type }) {
 }
 
 const contactLinks = [
-  ["phone", "CALL US", "+91 90000 00000", "tel:+94878755214"],
+  ["phone", "CALL US", "+91 95032 48068", "tel:+91 9503248068"],
   [
     "whatsapp",
     "WHATSAPP",
     "Message us directly",
     `https://wa.me/${whatsappNumber}`,
   ],
-  ["email", "EMAIL", "shashikantkhot07@gmail.com", "mailto:shashikantkhot07@gmail.com"],
+  [
+    "email",
+    "EMAIL",
+    "shashikantkhot07@gmail.com",
+    "mailto:shashikantkhot07@gmail.com",
+  ],
   ["instagram", "INSTAGRAM", "@skwheels", "https://instagram.com/sk_wheelss"],
-  ["map", "WORKSHOP", "Open our location", "https://maps.app.goo.gl/ciLHLjqz6LdneycUA"],
+  [
+    "map",
+    "WORKSHOP",
+    "Open our location",
+    "https://maps.app.goo.gl/ciLHLjqz6LdneycUA",
+  ],
 ];
 
 export default function Contact() {
@@ -175,7 +185,11 @@ export default function Contact() {
             <br />
             LOCATION
           </p>
-          <a href="https://maps.app.goo.gl/ciLHLjqz6LdneycUA" target="_blank" rel="noreferrer">
+          <a
+            href="https://maps.app.goo.gl/ciLHLjqz6LdneycUA"
+            target="_blank"
+            rel="noreferrer"
+          >
             OPEN IN MAPS
           </a>
         </div>
