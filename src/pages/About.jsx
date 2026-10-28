@@ -2,6 +2,7 @@ import useReveal from "../hooks/useReveal.js";
 import PageHero from "../components/PageHero.jsx";
 import CTA from "../components/CTA.jsx";
 import ownerImage from "../images/deservers.png";
+import care from "../images/care.png";
 
 const values = [
   ["01", "HONEST ADVICE", "Clear recommendations and no unnecessary work."],
@@ -21,7 +22,7 @@ export default function About() {
       <section className="about-story section">
         <div className="about-image reveal">
           <img
-            src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1200&q=85"
+            src={care}
             alt="Auto repair workshop"
           />
         </div>

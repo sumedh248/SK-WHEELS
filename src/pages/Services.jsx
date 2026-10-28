@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import useReveal from "../hooks/useReveal.js";
 import PageHero from "../components/PageHero.jsx";
 import CTA from "../components/CTA.jsx";
-import dentingImage from "../images/car-denting.png";
+import dentingImage from "../images/dent.png";
 import paintingImage from "../images/car-paint.png";
 import alignmentImage from "../images/wheel-alignment.png";
 import scanningImage from "../images/sensor-scanning.png";
 import balancingImage from "../images/wheel-balance.png";
 import washingImage from "../images/car wash.png";
-import mechanicalImage from "../images/car-lift.png";
-import partsImage from "../images/hero.png";
+import mechanicalImage from "../images/mech.png";
+import partsImage from "../images/spare.png";
 
 const serviceDetails = [
   [
