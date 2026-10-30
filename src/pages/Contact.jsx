@@ -2,7 +2,7 @@ import { useState } from "react";
 import useReveal from "../hooks/useReveal.js";
 import { services } from "../data/services.js";
 
-const whatsappNumber = "9503248068";
+const whatsappNumber = "+91 9503248068";
 
 function ContactIcon({ type }) {
   const paths = {
